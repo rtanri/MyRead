@@ -7,7 +7,6 @@ import BookSearch from './components/BookSearch';
 
 class BooksApp extends React.Component {
   state = {
-    showSearchPage: false,
     books:[]
   }
 
@@ -33,11 +32,19 @@ class BooksApp extends React.Component {
 
 
       <div className="app">
+        <Route exact path="/" render={() => (
+          <Category 
+            books={this.state.books}
+            updateShelf={this.updateShelf}
+          />
+        )} />
 
-
-        <Route exact path="/" render= />
-
-        <Route path="/create" render= />
+        <Route path="/create" render= {() => (
+          <BookSearch 
+            books={this.state.books}
+            updateShelf={this.updateShelf}
+          />
+        )} />
 
       </div>
     )}
