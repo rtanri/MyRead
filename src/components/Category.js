@@ -8,7 +8,7 @@ class Category extends Component {
             <div className="list-books">
 
                 <div className="list-books-title">
-                     <h1>My Reading Library</h1>
+                     <h1>My DIY Kindle</h1>
                 </div>
 
                 <div className="list-books-content">
@@ -25,7 +25,7 @@ class Category extends Component {
                                             <li key={book.id}>
                                                 <Book 
                                                     bookID={book.id}
-                                                    image={book.backgroundImage}
+                                                    image={book.imageLinks}
                                                     title={book.title}
                                                     author={book.author}
                                                     currentShelf={book.shelf}
@@ -48,7 +48,7 @@ class Category extends Component {
                                             <li key={book.id}>
                                                 <Book 
                                                     bookID={book.id}
-                                                    image={book.backgroundImage}
+                                                    image={book.imageLinks}
                                                     title={book.title}
                                                     author={book.author}
                                                     currentShelf={book.shelf}
@@ -71,7 +71,7 @@ class Category extends Component {
                                             <li key={book.id}>
                                                 <Book 
                                                     bookID={book.id}
-                                                    image={book.backgroundImage}
+                                                    image={book.imageLinks}
                                                     title={book.title}
                                                     author={book.author}
                                                     currentShelf={book.shelf}
