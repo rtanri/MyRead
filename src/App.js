@@ -35,7 +35,7 @@ class BooksApp extends React.Component {
       <div className="app">
 
 
-        <Route path="/" render= />
+        <Route exact path="/" render= />
 
         <Route path="/create" render= />
 
