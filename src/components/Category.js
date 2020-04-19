@@ -66,7 +66,7 @@ class Category extends Component {
                                 <ol className="books-grid">
 
                                     {this.props.books
-                                        .filter(book => book.shelf === "finishedRead")
+                                        .filter(book => book.shelf === "read")
                                         .map((book) =>
                                             <li key={book.id}>
                                                 <Book 
@@ -86,12 +86,11 @@ class Category extends Component {
                     </div>
                 </div>
 
-                <div className="open-search">
-                    <Link 
-                        to="/create">
+              
+                    <Link className="open-search" to="/create">
                         Add a book 
                     </Link>
-                </div>
+            
 
             </div> 
 

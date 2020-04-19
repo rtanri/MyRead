@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as BooksAPI from './utils/BooksAPI';
+import * as BooksAPI from '../BooksAPI';
 import { Link } from 'react-router-dom';
 import Book from "./Book";
 
@@ -7,7 +7,7 @@ import Book from "./Book";
 class BookSearch extends Component {
     state= {
         request: '',
-        searchResults: []
+        searchResults: [],
     }
 
     // Based on user's input, this func update the REQUEST state
@@ -34,18 +34,13 @@ class BookSearch extends Component {
     }
   
     render(){
-        //asssign searched books to the "none" shelf unless they are already on the shelf, then display correct shelf
-        this.state.searchResults.map((searchResult) => {
-            searchResult.shelf ="none"
-            this.props.books.map((book) => {
-                searchResult.id === book.id ? searchResult.shelf = book.shelf : ''}
-            )})
-
+        
         return(
 
             <div className="search-books">
                 <div className="search-books-bar">
                     <Link className="close-search" to="/">Close</Link>  
+                    
                     <div className="search-books-input-wrapper">
                         <input 
                             type="text" 
