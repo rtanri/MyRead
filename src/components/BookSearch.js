@@ -6,7 +6,7 @@ import Book from "./Book";
 
 class BookSearch extends Component {
     state= {
-        request: '',
+        request: "",
         searchResults: [],
     }
 
@@ -35,11 +35,11 @@ class BookSearch extends Component {
   
     render(){
         //Allocated searched books into "none" shelf unless they had already on the shelf, then display correct shelf
-        this.state.searchResults.map((searchResult) =>{
+        this.state.searchResults.map((searchResult) => {
             searchResult.shelf = "none"
-            this.props.map((book)) => {
-                searchResult.id === book.id ? searchResult.shelf=book.shelf : "" } 
-        })
+            return this.props.books.map((book) => {
+                return searchResult.id === book.id ? searchResult.shelf = book.shelf : '' }
+        )})
 
 
         return(
