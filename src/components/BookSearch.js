@@ -34,7 +34,14 @@ class BookSearch extends Component {
     }
   
     render(){
-        
+        //Allocated searched books into "none" shelf unless they had already on the shelf, then display correct shelf
+        this.state.searchResults.map((searchResult) =>{
+            searchResult.shelf = "none"
+            this.props.map((book)) => {
+                searchResult.id === book.id ? searchResult.shelf=book.shelf : "" } 
+        })
+
+
         return(
 
             <div className="search-books">
