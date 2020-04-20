@@ -27,7 +27,7 @@ class Category extends Component {
                                                     bookID={book.id}
                                                     image={book.imageLinks}
                                                     title={book.title}
-                                                    author={book.author}
+                                                    authors={book.authors}
                                                     currentShelf={book.shelf}
                                                     updateShelf={this.props.updateShelf}
                                                 />
@@ -50,7 +50,7 @@ class Category extends Component {
                                                     bookID={book.id}
                                                     image={book.imageLinks}
                                                     title={book.title}
-                                                    author={book.author}
+                                                    authors={book.authors}
                                                     currentShelf={book.shelf}
                                                     updateShelf={this.props.updateShelf}
                                                 />
@@ -73,7 +73,7 @@ class Category extends Component {
                                                     bookID={book.id}
                                                     image={book.imageLinks}
                                                     title={book.title}
-                                                    author={book.author}
+                                                    authors={book.authors}
                                                     currentShelf={book.shelf}
                                                     updateShelf={this.props.updateShelf}
                                                 />
